@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <h1 class="title">Livros</h1>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Identificação</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Autor</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let item of livros" class="fs-5">
+          <td>{{item.id}}</td>
+          <td>{{item.nome}}</td>
+          <td>{{item.autor}}</td>
+          <td>{{item.foto}}</td>
+          <td>
+            <button (click)="editarLivros(item.id)" type="button" class= "btn"><i class="bi bi-pencil edite"></i></button>
+          </td>
+          <td>
+            <button (click)="mostrarModal(item.id)" type="button" class= "btn"><i class="bi bi-trash delete"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf = 'isModal'>
+    <div class="myModal">
+      <div class="tituloModal">
+        <h5 class="fs-5 fw-bolder">Atenção!</h5>
+      </div>
+      <h6 class="my-4">Confirma a EXCLUSÃO ? </h6>
+      <button class="btn mx-1 btn-cancelar" (click)="cancelarAcao()">Cancelar</button>
+      <button class="btn mx-1 btn-confirmar" (click)="confirmarAcao()">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+
+

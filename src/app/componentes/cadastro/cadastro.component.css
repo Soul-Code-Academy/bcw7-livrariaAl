@@ -1,0 +1,40 @@
+
+.formulario{
+  border-radius: 10px;
+  background-color: #BD487F;
+  padding: 5rem;
+  margin: 5rem auto;
+}
+
+span{
+  width: 6rem;
+}
+
+span, button{
+  background-color: #BD487F;
+  color: rgb(0, 255, 242);
+  font-size: 20px;
+}
+
+.myModal{
+  width: 300px;
+  height: 150px;
+  border: 3px solid #BD487F;
+  background-color: rgb(0, 255, 242);
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 25%;
+}
+
+.tituloModal{
+  background:rgb(0, 255, 242);
+}
+
+.btn-cancelar{
+  border: 3px solid #BD487F;
+}
+
+.btn-confirmar{
+  background-color: #BD487F;
+}

@@ -1,0 +1,46 @@
+<div class="container w-75">
+    <div class="row ">
+      <div class="col">
+        <div class="formulario">
+          <form [formGroup]="form">
+            <div class="row mb-3">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon1">Título </span>
+                <input type="text" class="form-control" id="nome" formControlName="nome">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon2">Autor </span>
+                <input type="text" class="form-control" id="autor" formControlName="autor">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">Imagem</span>
+                <input type="text" class="form-control" id="foto" formControlName="foto">
+              </div>
+            </div>
+            <div class="text-center mt-3">
+              <div *ngIf= "status; then cadastrar; else editar"></div>
+              <ng-template #cadastrar><button type="button" class="btn "(click)="mostrarModal(livro)">Cadastrar</button></ng-template>
+              <ng-template #editar><button type="submit" class="btn "(click)="mostrarModal(livro)" >Editar</button></ng-template>
+              <button type="button" class="btn mx-3" routerLink="/listagem"> Cancelar</button>
+              <button type="reset" class="btn" >Limpar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div *ngIf = 'isModal'>
+      <div class="myModal">
+        <div class="tituloModal">
+          <h5 class="fs-5 fw-bolder">Atenção!</h5>
+        </div>
+        <h6 class="my-4">Confirma o CADASTRO ? </h6>
+        <button class="btn mx-1 btn-cancelar" (click)="cancelarAcao()">Cancelar</button>
+        <button class="btn mx-1 btn-confirmar" (click)="salvarLivro()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+

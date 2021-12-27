@@ -1,0 +1,26 @@
+.navbar{
+  background-color: #BD487F;
+}
+
+.navbar-nav .nav-item .nav-link{
+  color: rgb(0, 255, 242);
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: .8s ease-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+  font-weight: bolder;
+  color: #000;
+}
+
+.logo img{
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 255, 242);
+  transition: .8s ease-out;
+}
+
+.logo img:hover{
+  width: 150px;
+}
